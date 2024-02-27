@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to Digimed</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Impedisce alla pagina di essere più piccola dell'altezza del viewport */
+  }
+  .container {
+    max-width: 800px;
+    padding: 20px;
+    text-align: center; /* Centra il contenuto all'interno della container */
+  }
+  .header {
+    margin-bottom: 30px;
+  }
+  .header h1 {
+    color: #333;
+    font-size: 36px;
+    margin-top: 20px;
+  }
+  .header img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .content {
+    position: relative; /* Permette di posizionare l'immagine in modo assoluto rispetto a questo contenitore */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .content p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .content img {
+    position: absolute; /* Posiziona l'immagine in modo assoluto rispetto al contenitore .content */
+    top: 50%; /* Sposta l'immagine al centro verticalmente */
+    left: 50%; /* Sposta l'immagine al centro orizzontalmente */
+    transform: translate(-50%, -50%) scale(0.5); /* Centra l'immagine e la riduce del 50% */
+    max-width: 100%; /* Assicura che l'immagine non superi la larghezza del contenitore */
+    max-height: 200px; /* Limita l'altezza massima dell'immagine */
+    border-radius: 10px; /* Aggiunge un bordo arrotondato all'immagine */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Aggiunge una leggera ombreggiatura all'immagine */
+  }
+  .form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Aggiunge uno spazio sopra il form */
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  input[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <img src="./img/Digimedlogo.jpeg" alt="Logo DigiMed">
+    <h1>Welcome to Digimed</h1>
+  </div>
+  
+  <div class="content">
+    <p>Your health is our priority. At DigiMed, we offer advanced diagnostics and personalised care to ensure the well-being of our patients.</p>
+    <p>Discover our services, book an appointment or <a href="#contact-form">contact us</a> for more information.</p>
+  </div>
+  
+  <img src="./img/Doctorteam.jpg" alt="DRHouse" style="max-width: 100%; height: auto;">
+  
+  <div id="contact-form" class="form-container">
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DQy000004oUWs" method="POST">
+      <input type="hidden" name="oid" value="00DQy000004oUWs">
+      <input type="hidden" name="retURL" value="http://google.com">
+
+      <label for="first_name">First name</label>
+      <input id="first_name" maxlength="40" name="first_name" size="20" type="text" required><br>
+
+      <label for="last_name">Last name</label>
+      <input id="last_name" maxlength="80" name="last_name" size="20" type="text" required><br>
+
+      <label for="email">Email</label>
+      <input id="email" maxlength="80" name="email" size="20" type="email" required><br>
+
+      <label for="phone">Phone</label>
+      <input id="phone" maxlength="40" name="phone" size="20" type="tel" required><br>
+
+      <label for="company">Company</label>
+      <input id="company" maxlength="40" name="company" size="20" type="text" required><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
